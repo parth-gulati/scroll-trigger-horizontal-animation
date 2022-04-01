@@ -1,38 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;700;900&display=swap");
+
 .App {
-  text-align: center;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.visual-1 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  top: 0;
+  left: 0;
+  z-index: -9;
+  overflow-x: hidden;
+  transform-origin: right;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.visual-2 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  z-index: -10;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.heading-1 {
+  z-index: 10;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 20px;
+  font-weight: 200;
   color: white;
+  mix-blend-mode: difference;
 }
 
-.App-link {
-  color: #61dafb;
+#triangle-1 {
+  position: absolute;
+  color: white;
+  top: 200px;
+  left: 100px;
+  animation: fly-1 4s ease-in-out infinite;
+  mix-blend-mode: difference;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#triangle-2 {
+  position: absolute;
+  color: white;
+  top: 100px;
+  left: 50%;
+  animation: fly-2 4.2s ease-in-out infinite;
+  mix-blend-mode: difference;
+}
+
+#triangle-3 {
+  position: absolute;
+  color: white;
+  bottom: 100px;
+  right: 50%;
+  animation: fly-3 4.1s ease-in-out infinite;
+  mix-blend-mode: difference;
+}
+
+#triangle-4 {
+    position: absolute;
+    color: white;
+    bottom: 100px;
+    right: 200px;
+    animation: fly-4 3.8s ease-in-out infinite;
+    mix-blend-mode: difference;
   }
-  to {
-    transform: rotate(360deg);
+
+@keyframes fly-1 {
+  0% {
+    transform: translate(-50%, -30%) rotate(90deg);
+  }
+  50% {
+    transform: translate(-50%, -54%) rotate(90deg);
+  }
+  100% {
+    transform: translate(-50%, -30%) rotate(90deg);
   }
 }
+
+@keyframes fly-2 {
+  0% {
+    transform: translate(-50%, -30%) rotate(45deg);
+  }
+  50% {
+    transform: translate(-50%, -54%) rotate(45deg);
+  }
+  100% {
+    transform: translate(-50%, -30%) rotate(45deg);
+  }
+}
+
+@keyframes fly-3 {
+  0% {
+    transform: translate(-50%, -30%) rotate(135deg);
+  }
+  50% {
+    transform: translate(-50%, -54%) rotate(135deg);
+  }
+  100% {
+    transform: translate(-50%, -30%) rotate(135deg);
+  }
+}
+
+@keyframes fly-4 {
+    0% {
+      transform: translate(-50%, -30%) rotate(-20deg);
+    }
+    50% {
+      transform: translate(-50%, -54%) rotate(-20deg);
+    }
+    100% {
+      transform: translate(-50%, -30%) rotate(-20deg);
+    }
+  }
+  
